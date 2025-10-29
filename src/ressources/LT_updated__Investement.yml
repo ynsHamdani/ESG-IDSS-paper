@@ -1,0 +1,19 @@
+revision: 3
+terms: [-2, -1, 0, 1, 2]
+
+# Guiding idea:
+# - No extreme negatives
+# - Mildly positive trust to promote diffusion
+# - Neutral self-views
+LT:
+  - # E1 about E1/E2
+    - [[ 0, 1.0]]                # E1 about E1 (neutral)
+    - [[ 1, 0.7], [2, 0.3]]      # E1 about E2 (mild→strong positive)
+
+
+  - # E2 about E1/E2/E3
+    - [[ 1, 0.6], [2, 0.4]]      # E2 about E1 (positive)
+    - [[ 0, 1.0]]                # E2 about E2 (neutral)
+
+
+epsilon : 0.18

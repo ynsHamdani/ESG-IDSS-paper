@@ -1,0 +1,48 @@
+version: 1
+
+paths:
+  exp_yaml_path: "D:/scientific_Papers/Ezgi_paper/new_experiment_ressources/user_inputs_clothing3.yml"   # same as yaml_rel_path                                  
+  csv_path: "D:/scientific_Papers/Ezgi_paper/investor_lib/experiments/experiment_clothing/Clothing_Data_non_scaled.csv"
+  yaml_lt_path: "D:/scientific_Papers/Ezgi_paper/investor_lib/invest_math/ressources/LT_updated_clothing.yml"
+
+data_loading:
+  selected_csv_indexes: [1, 2, 3, 4]            # for load_selected_columns(csv_path, indexes=...)
+
+fusion:                                          # subjective–objective fusion (per expert)
+  zetas: [0.5, 1.0]                         # 0=objective only, 1=subjective only
+  psi: 10
+  kappa: 0.5
+
+choquet:
+  lambda_val: 5                                  # used by algo3/algo5 (effective value in your script)
+  lambda_val_algo2: -1                         # used by run_algo2 (IWM)
+
+consensus:                                       # Algorithm 5 (run_algo5_bis_dis)
+  epsilon: 0.075
+  max_rounds: 20
+  freeze_policy: "majority"                      # partial consensus permitted
+  majority_ratio: 0.5
+  refresh_policy: "on_no_consensus"
+
+lt_provider:                                     # make_file_lt_provider(...)
+  wait: true
+  poll_interval_sec: 1.0
+  timeout_sec: 600.0
+  require_revision_increment: true
+
+algo6_shapley:                                   # run_algo6_shapley_allocation / my_runner
+  singleton_mass_fraction: 0.95                  # singleton_scaling = 0.95 / sum(scores)
+  pair_bounds: [-0.1, 0.3]
+  monotonicity: "cutting_plane"
+  max_cuts: 30
+  tol: 1.0e-7
+  enforce_order: true
+  order_delta: 1.0e-4
+  solver_method: "highs"
+
+interactions:                                    # for pairwise_interactions(...)
+  classification_threshold: 0.001                # tag synergy/redundancy vs neutral
+
+
+algorithms:
+  algo4_impl: "algo4_run_decision_algorithm"

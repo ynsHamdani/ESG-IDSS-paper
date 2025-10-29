@@ -1,0 +1,273 @@
+# ===============================================
+# Main Criteria and their Subcriteria Definition
+# ===============================================
+# This section defines the list of main evaluation criteria (e.g., Environmental, Social, etc.)
+# Each criterion has:
+#   - a name: the label of the criterion
+#   - a list of subcriteria: individual aspects that fall under this main criterion
+
+main_criteria:
+  - name: "Environmental Pillar Score"   # Main criterion name
+    subcriteria:
+      - "RessourceUse"                   # Subcriterion 1
+      - "Emission"                       # Subcriterion 2
+      - "Innovation"                     # Subcriterion 3
+
+  - name: "Social Pillar Score"
+    subcriteria:
+      - "Workforce"
+      - "Community"
+      - "Human Rights"
+      - "Product Responsability"
+
+  - name: "Corporate Governance Pillar Score"
+    subcriteria: 
+      - "Management"
+      - "CSR Strategy"
+      - "Shareholder"
+
+  - name: "Financial Score"
+    subcriteria:
+      - "Financial score"                # You can rename or expand this if needed
+
+# ===============================================
+# Notes for Users:
+# -----------------------------------------------
+# 1. Do NOT change the structure (e.g., indentation or keys).
+# 2. You MAY change names of criteria and subcriteria, 
+#    but make sure they are used consistently in other parts of the input (e.g., expert evaluations).
+# 3. Subcriteria must be uniquely named across all main criteria
+#    to allow proper linking and validation.
+
+linguistic_hierarchy:
+  - very low
+  - low
+  - medium
+  - high
+  - very high
+
+linguistic_hierarchy_mapping:
+  - very low = -2
+  - low = -1
+  - medium = 0
+  - high= 1
+  - very high= 2
+
+
+
+
+
+# ===============================================
+# Expert Inputs
+# ===============================================
+# This section lists each expert and their subjective assessments.
+# Each expert provides:
+#   - a unique id (for internal reference)
+#   - a name (can be full name or pseudonym)
+#   - decision_thresholds: subjective importance for each main criterion
+#   - evaluations: fuzzy values for each subcriterion using predefined linguistic terms
+
+experts:
+  - id: E1
+    name: "Dr. Alice"
+
+    # Subjective thresholds for each main criterion (importance or decision weight)
+    decision_thresholds:
+      - main_criterion: "Environmental Pillar Score"
+        threshold: 0.8
+      - main_criterion: "Social Pillar Score"
+        threshold: 0.7
+      - main_criterion: "Corporate Governance Pillar Score"
+        threshold: 0.6
+      - main_criterion: "Financial Score"
+        threshold: 0.9
+
+    # Fuzzy evaluations for each subcriterion using predefined linguistic terms
+    evaluations:
+      - subcriterion: "RessourceUse"
+        main_criterion: "Environmental Pillar Score"
+        values:
+          ##low: 0.1
+          medium: 0.3
+          high: 0.2
+          very high: 0.9
+
+      - subcriterion: "Emission"
+        main_criterion: "Environmental Pillar Score"
+        values:
+          ##low: 0.2
+          medium: 0.4
+          high: 0.4
+          very high: 0.9
+
+      - subcriterion: "Innovation"
+        main_criterion: "Environmental Pillar Score"
+        values:
+          medium: 0.5
+          high: 0.3
+          very high: 0.9
+
+      - subcriterion: "Workforce"
+        main_criterion: "Social Pillar Score"
+        values:
+          medium: 0.45
+          high: 0.55
+          very high: 0.5
+
+      - subcriterion: "Community"
+        main_criterion: "Social Pillar Score"
+        values:
+          low: 0.3
+          medium: 0.5
+          high: 0.3
+
+      - subcriterion: "Human Rights"
+        main_criterion: "Social Pillar Score"
+        values:
+          medium: 0.6
+          high: 0.4
+
+      - subcriterion: "Product Responsability"
+        main_criterion: "Social Pillar Score"
+        values:
+          low: 0.2
+          medium: 0.5
+          high: 0.3
+          very high: 0.5
+
+      - subcriterion: "Management"
+        main_criterion: "Corporate Governance Pillar Score"
+        values:
+          low: 0.1
+          medium: 0.3
+          high: 0.6
+
+      - subcriterion: "CSR Strategy"
+        main_criterion: "Corporate Governance Pillar Score"
+        values:
+          low: 0.2
+          medium: 0.4
+          high: 0.2
+
+      - subcriterion: "Shareholder"
+        main_criterion: "Corporate Governance Pillar Score"
+        values:
+          medium: 0.6
+          high: 0.4
+          
+      - subcriterion: "Financial score"
+        main_criterion: "Financial Score"
+        values:
+          low : 0.2
+          medium: 0.3
+          high: 0.1
+          ##very high: 0.1
+
+
+
+
+
+
+  - id: E2
+    name: "Prof. Bob"
+
+    # Subjective thresholds for each main criterion
+    decision_thresholds:
+      - main_criterion: "Environmental Pillar Score"
+        threshold: 0.6
+      - main_criterion: "Social Pillar Score"
+        threshold: 0.8
+      - main_criterion: "Corporate Governance Pillar Score"
+        threshold: 0.5
+      - main_criterion: "Financial Score"
+        threshold: 0.7
+
+    # Evaluations using fuzzy linguistic values
+    evaluations:
+      - subcriterion: "RessourceUse"
+        main_criterion: "Environmental Pillar Score"
+        values:
+          low: 0.2
+          medium: 0.5
+          high: 0.3
+
+      - subcriterion: "Emission"
+        main_criterion: "Environmental Pillar Score"
+        values:
+          low: 0.4
+          medium: 0.4
+          high: 0.2
+
+      - subcriterion: "Innovation"
+        main_criterion: "Environmental Pillar Score"
+        values:
+          medium: 0.3
+          high: 0.5
+          very high: 0.2
+
+      - subcriterion: "Workforce"
+        main_criterion: "Social Pillar Score"
+        values:
+          medium: 0.6
+          high: 0.4
+
+      - subcriterion: "Community"
+        main_criterion: "Social Pillar Score"
+        values:
+          low: 0.1
+          medium: 0.6
+          high: 0.3
+
+      - subcriterion: "Human Rights"
+        main_criterion: "Social Pillar Score"
+        values:
+          medium: 0.7
+          high: 0.3
+
+      - subcriterion: "Product Responsability"
+        main_criterion: "Social Pillar Score"
+        values:
+          medium: 0.4
+          high: 0.4
+          very high: 0.2
+
+      - subcriterion: "Management"
+        main_criterion: "Corporate Governance Pillar Score"
+        values:
+          low: 0.3
+          medium: 0.5
+          high: 0.2
+
+      - subcriterion: "CSR Strategy"
+        main_criterion: "Corporate Governance Pillar Score"
+        values:
+          medium: 0.6
+          high: 0.4
+
+      - subcriterion: "Shareholder"
+        main_criterion: "Corporate Governance Pillar Score"
+        values:
+          low: 0.2
+          medium: 0.5
+          high: 0.3
+
+      - subcriterion: "Financial score"
+        main_criterion: "Financial Score"
+        values:
+          medium: 0.3
+          high: 0.3
+          very high: 0.4
+
+
+
+
+# ===============================================
+# Notes for Users:
+# -----------------------------------------------
+# - You MUST keep the indentation and structure intact.
+# - Each expert should define thresholds for all relevant main criteria.
+# - The values in 'evaluations' must use the predefined linguistic terms 
+#   (e.g., low, medium, high, very high). Do not invent new ones.
+# - Subcriteria and main_criterion names must match exactly those defined in main_criteria.
+# - If a subcriterion is not evaluated by an expert, you can omit it.
+# ===============================================
