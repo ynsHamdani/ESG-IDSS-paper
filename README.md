@@ -167,14 +167,9 @@ If you use this code or datasets, please cite:
 
 ---
 
-## 📜 License
-
-* Code: MIT (or as appropriate for your repo).
-* Data: see `/data/README_DATA.md` for specific licenses and usage terms.
-
----
 
 ## 🙌 Acknowledgements
 
 We thank collaborators and institutions supporting this research and tooling. Contributions and issues are welcome—please open a PR or create a discussion thread.
+
 
