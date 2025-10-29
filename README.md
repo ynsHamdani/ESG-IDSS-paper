@@ -98,26 +98,6 @@ LT:
 
 > **Hot-reload:** editing `epsilon` or `LT` and bumping `revision` allows **Algo 5** to refresh **without restarting** (see *Workflow* below).
 
----
-
-## 🚀 Quickstart
-
-```bash
-# 1) Install
-pip install -r requirements.txt
-# or: pip install -e .
-
-# 2) Reproduce main pipeline (CLI or notebook)
-python -m src.run_experiment  \
-  --data data/esg_scores.csv  \
-  --config config/settings.yml \
-  --lt config/LT.yml
-
-# 3) Launch dashboard (Streamlit example)
-streamlit run dashboard/app.py
-```
-
----
 
 ## 🔄 Workflow (high-level)
 
@@ -197,3 +177,4 @@ If you use this code or datasets, please cite:
 ## 🙌 Acknowledgements
 
 We thank collaborators and institutions supporting this research and tooling. Contributions and issues are welcome—please open a PR or create a discussion thread.
+
