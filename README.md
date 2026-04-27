@@ -1,4 +1,4 @@
-# A Knowledge-Based ESG Investment DSS for Heterogeneous Investor Groups
+# A Knowledge-Based ESG Investment Decision Support System for Heterogeneous Investor Groups
 
 **An Opinion Dynamics Approach Based on Non-Additive Measures**
 *Ezgi Türkarslan · Younes Hamdani · Christian Oliver Ewald · Mustafa Engin Türkarslan*
