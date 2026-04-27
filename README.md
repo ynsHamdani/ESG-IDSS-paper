@@ -1,7 +1,7 @@
 # A Knowledge-Based ESG Investment Decision Support System for Heterogeneous Investor Groups
 
 **An Opinion Dynamics Approach Based on Non-Additive Measures**
-*Ezgi Türkarslan · Younes Hamdani · Christian Oliver Ewald · Mustafa Engin Türkarslan*
+*Ezgi Türkarslan · Younes Hamdani · Mustafa Engin Türkarslan · Christian Oliver Ewald *
 
 ---
 
@@ -9,7 +9,7 @@
 
 A complete, research-grade pipeline for **values-based portfolio allocation under ESG**, built around:
 
-* **Bayesian dominance → DeGroot opinion dynamics** (time-varying, column-stochastic mixing).
+* **Linguistic Dominance → DeGroot opinion dynamics** (time-varying, column-stochastic mixing).
 * **Fuzzy cross-entropy consensus** (entry-wise, expert × alternative × criterion).
 * **LP-SWARA** for **sub-criteria** prioritization.
 * **Interaction-aware main-criteria weighting** (super-additive λ-fuzzy measures).
@@ -22,7 +22,7 @@ It reproduces the paper’s results and provides a **dashboard** for interactive
 ## 🔑 Key contributions (paper highlights)
 
 * **DSS for ESG allocation:** group-aware, explainable, and data + preference driven.
-* **Bayesian dominance matrix:** drives a **DeGroot-inspired** (time-varying) opinion update.
+* **Dominance matrix:** drives a **DeGroot-inspired** (time-varying) opinion update.
 * **Consensus via fuzzy cross-entropy:** quantifies alignment of each expert with the group.
 * **LP-SWARA:** linear-programming–based SWARA for consistent **sub-criteria** weights.
 * **Interaction-aware main-criteria weights:** super-additive λ-fuzzy measures (Choquet).
@@ -105,7 +105,7 @@ LT:
    Fuse **subjective** (expert thresholds & ψ·Ω) and **objective** (κ / σ) via sigmoids → per-expert normalized IDM.
 
 2. **Algo 4 — Dominance & Expert Weights**
-   From **PLTS (LT.yml)** compute **Bayesian dominance matrix D** and expert weights **Θ**.
+   From **PLTS (LT.yml)** compute **dominance matrix D** and expert weights **Θ**.
 
 3. **Algo 5 — Opinion Dynamics & Consensus**
 
@@ -163,7 +163,7 @@ LT:
 If you use this code or datasets, please cite:
 
 > **A Knowledge-Based ESG Investment Decision Support System for Heterogeneous Investor Groups: An Opinion Dynamics Approach Based on Non-Additive Measures**
-> Ezgi Türkarslan, Younes Hamdani, Christian Oliver Ewald, Mustafa Engin Türkarslan, 2025.
+> Ezgi Türkarslan, Younes Hamdani, Mustafa Engin Türkarslan, Christian Oliver Ewald,  2026.
 
 ---
 
